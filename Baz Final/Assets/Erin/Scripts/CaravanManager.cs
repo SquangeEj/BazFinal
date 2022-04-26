@@ -33,9 +33,11 @@ public class CaravanManager : MonoBehaviour
        int i = Random.Range(0, Outposts.Length);
         Debug.Log(i);
         var caravan = Instantiate(Unit, Outposts[i].transform);
-        Debug.Log("i");
+        caravan.GetComponent<CaravanController>().points = ManagerPoints / 2;
+        ManagerPoints = ManagerPoints / 2;
+        Debug.Log(ManagerPoints);
         Outposts[i].GetComponent<OutpostScript>().CaravanWaypoint(caravan);
-        Debug.Log("get it");
+        Debug.Log("succesful spawn");
 
 
     }

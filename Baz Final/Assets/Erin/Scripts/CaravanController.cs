@@ -10,6 +10,7 @@ public class CaravanController : MonoBehaviour
     private int currentpoint;
     [SerializeField]
     private float disttopoint;
+    public float points;
     // Start is called before the first frame update
     void Start()
     {
