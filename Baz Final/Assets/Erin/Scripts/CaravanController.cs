@@ -23,10 +23,11 @@ public class CaravanController : MonoBehaviour
     void Update()
     {
         disttopoint = Vector3.Distance(Waypoints[currentpoint].transform.position, transform.position);
-        if (disttopoint < 5)
+        if (disttopoint < 10)
         {
 
             NextPoint();
+            Debug.Log(currentpoint + " " + disttopoint);
         }
     }
 
@@ -35,5 +36,9 @@ public class CaravanController : MonoBehaviour
     {
         currentpoint = (currentpoint + 1) % Waypoints.Length;
         agent.SetDestination(Waypoints[currentpoint].transform.position);
+        if(currentpoint == Waypoints.Length)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -21,7 +21,7 @@ public class CaravanManager : MonoBehaviour
         lol -= 1;
         if(lol < 0)
         {
-            lol = 180;
+            lol = 60000000;
             SpawnCaravan();
         }
 
