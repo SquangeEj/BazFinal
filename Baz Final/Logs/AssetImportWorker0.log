@@ -200,3 +200,4 @@ Received Import Request.
 Start importing Assets/Erin/Materials/Blue.mat using Guid(afad18b53cdd0bd41a6aed3a20ac977d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4568528af964391ef00e2e577153c8f5') in 0.011663 seconds 
   Import took 0.015716 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
