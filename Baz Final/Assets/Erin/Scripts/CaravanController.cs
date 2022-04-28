@@ -27,7 +27,7 @@ public class CaravanController : MonoBehaviour
         {
 
             NextPoint();
-            Debug.Log(currentpoint + " " + disttopoint);
+           // Debug.Log(currentpoint + " " + disttopoint);
         }
     }
 
@@ -36,8 +36,9 @@ public class CaravanController : MonoBehaviour
     {
         currentpoint = (currentpoint + 1) % Waypoints.Length;
         agent.SetDestination(Waypoints[currentpoint].transform.position);
-        if(currentpoint == Waypoints.Length)
+        if(currentpoint == Waypoints.Length -1 )
         {
+            Debug.Log(currentpoint + "  current " + Waypoints.Length) ;
             Destroy(gameObject);
         }
     }

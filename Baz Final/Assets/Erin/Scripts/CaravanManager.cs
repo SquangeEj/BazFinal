@@ -14,6 +14,7 @@ public class CaravanManager : MonoBehaviour
 
     // DELETE THIS JUST A TIMER
     public float lol = 60;
+    public float spawnrate;
 
     // Update is called once per frame
     void Update()
@@ -21,7 +22,7 @@ public class CaravanManager : MonoBehaviour
         lol -= 1;
         if(lol < 0)
         {
-            lol = 60000000;
+            lol = spawnrate ;
             SpawnCaravan();
         }
 
@@ -31,13 +32,13 @@ public class CaravanManager : MonoBehaviour
     public void SpawnCaravan()
     {
        int i = Random.Range(0, Outposts.Length);
-        Debug.Log(i);
+      //  Debug.Log(i);
         var caravan = Instantiate(Unit, Outposts[i].transform);
         caravan.GetComponent<CaravanController>().points = ManagerPoints / 2;
         ManagerPoints = ManagerPoints / 2;
-        Debug.Log(ManagerPoints);
+      //  Debug.Log(ManagerPoints);
         Outposts[i].GetComponent<OutpostScript>().CaravanWaypoint(caravan);
-        Debug.Log("succesful spawn");
+       // Debug.Log("succesful spawn");
 
 
     }
