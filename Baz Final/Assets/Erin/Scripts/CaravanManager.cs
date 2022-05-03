@@ -36,7 +36,8 @@ public class CaravanManager : MonoBehaviour
         var caravan = Instantiate(Unit, Outposts[i].transform);
         caravan.GetComponent<CaravanController>().points = ManagerPoints / 2;
         ManagerPoints = ManagerPoints / 2;
-      //  Debug.Log(ManagerPoints);
+        //  Debug.Log(ManagerPoints);
+        caravan.GetComponent<CaravanController>().Director = gameObject;
         Outposts[i].GetComponent<OutpostScript>().CaravanWaypoint(caravan);
        // Debug.Log("succesful spawn");
 

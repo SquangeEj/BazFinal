@@ -8,6 +8,7 @@ public class CaravanController : MonoBehaviour
     public NavMeshAgent agent;
     public GameObject[] Waypoints;
     private int currentpoint;
+    public GameObject Director;
     [SerializeField]
     private float disttopoint;
     public float points;
@@ -38,6 +39,7 @@ public class CaravanController : MonoBehaviour
         agent.SetDestination(Waypoints[currentpoint].transform.position);
         if(currentpoint == Waypoints.Length -1 )
         {
+
             Debug.Log(currentpoint + "  current " + Waypoints.Length) ;
             Destroy(gameObject);
         }
