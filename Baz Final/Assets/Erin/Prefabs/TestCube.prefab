@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7878881695310356029}
   - component: {fileID: 5871410773471365525}
   - component: {fileID: 6764881566273498758}
+  - component: {fileID: -2933986145525192879}
   m_Layer: 0
   m_Name: TestCube
   m_TagString: Untagged
@@ -48,7 +49,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905089901160683990}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -91,7 +92,24 @@ BoxCollider:
   m_GameObject: {fileID: 1905089901160683990}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2933986145525192879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905089901160683990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17673764fd0359c4d92e4f4704af9e47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 0
+  skiffs:
+  - {fileID: 3406878490035367755, guid: 6071fa314c1c9a442b677bf3e9930c73, type: 3}
+  - {fileID: 2119413266752873577, guid: 1b879e8f60737a6469116e7fd7556759, type: 3}
+  - {fileID: 20427014164590500, guid: 7e0abc5962321e14598e3586bf396ee2, type: 3}

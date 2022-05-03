@@ -22,17 +22,41 @@ public class CaravanController : MonoBehaviour
 
         if (points >= 1)
         {
-            for (int i = 0; i <= points; i += 1)
+            for (int i = 0; i <= points * 2; i += 1)
             {
-                for (int z = 0; z <= points; z += 1)
+                for (int z = 0; z <= points ; z += 1)
                 {
                     GameObject go = Instantiate(BoatSpawn, transform.position + new Vector3((i - points / 2)*2, 0, (z - points / 2)*2), Quaternion.identity);
+                    if (points >= 10)
+                    {
+                        go.GetComponent<CaravanPointScript>().point = 10;
+                        points -= 10;
+                        i += 10;
+                        z += 10;
+                    }
+                    else if (points >= 5 && points < 10)
+                    {
+                        go.GetComponent<CaravanPointScript>().point = 5;
+                        points -= 5;
+                        i += 5;
+                        z += 5;
+
+                    }
+                    else if (points < 5)
+                    {
+                        go.GetComponent<CaravanPointScript>().point = 1;
+                        points -= 1;
+                        i += 1;
+                        z += 1;
+                    }
+
+
                     go.transform.parent = transform;
                 }
 
             }
         }
-        else;
+        else
         {
             GameObject go = Instantiate(BoatSpawn, transform.position, Quaternion.identity);
             go.transform.parent = transform;
@@ -62,6 +86,7 @@ public class CaravanController : MonoBehaviour
 
             Director.GetComponent<CaravanManager>().ManagerPoints += points * Random.Range(0,3);
             Debug.Log(currentpoint + "  current " + Waypoints.Length) ;
+            
             Destroy(gameObject);
         }
     }
