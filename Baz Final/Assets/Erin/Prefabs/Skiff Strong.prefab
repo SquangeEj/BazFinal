@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 2559944811993305630}
   m_Layer: 0
   m_Name: Skiff Strong
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,9 +465,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 60
   speed: 20
+  agent: {fileID: 0}
+  player: {fileID: 0}
   spawn: {fileID: 0}
   director: {fileID: 0}
   deathpoints: 20
+  state: 0
 --- !u!1 &4027223241319929210
 GameObject:
   m_ObjectHideFlags: 0
