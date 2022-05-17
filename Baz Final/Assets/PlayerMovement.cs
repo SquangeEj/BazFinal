@@ -10,7 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private int speed;
     [SerializeField]
     private int turnspeed;
-    public GameObject yeahitis;
+    
+    public bool grounded = false;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -18,14 +19,17 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (grounded == true)
         {
-            rb.AddForce(transform.forward * speed);
-        }
+            if (Input.GetKey(KeyCode.W))
+            {
+                rb.AddForce(transform.forward * speed);
+            }
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            rb.AddForce(transform.forward * -speed);
+            if (Input.GetKey(KeyCode.S))
+            {
+                rb.AddForce(transform.forward * -speed);
+            }
         }
 
         if (Input.GetKey(KeyCode.D))
@@ -38,18 +42,11 @@ public class PlayerMovement : MonoBehaviour
             rb.AddTorque(transform.up * -turnspeed);
         }
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            yeahitis.SetActive(true);
-        }
-        else
-        {
-            yeahitis.SetActive(false);
-        }
-
+      
         if (Input.GetKey(KeyCode.U))
         {
             transform.rotation = new Quaternion(0, transform.rotation.y, 0, 0);
+            rb.velocity = new Vector3(0,0,0);
         }
     }
 
