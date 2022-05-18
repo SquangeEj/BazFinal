@@ -17,6 +17,8 @@ public class CannonBall : MonoBehaviour
             {
                 other.GetComponent<EnemyScript>().takedamage(damage);
                 Debug.Log("Worked");
+
+                Destroy(gameObject);
             }
         }
         else

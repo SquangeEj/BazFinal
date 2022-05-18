@@ -14,6 +14,8 @@ public class EnemyScript : MonoBehaviour
     public GameObject director;
     public int deathpoints;
     public int state;
+    [SerializeField]
+    private GameObject[] cannons;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -57,6 +59,10 @@ public class EnemyScript : MonoBehaviour
 
     public void takedamage(int damage)
     {
+        foreach(GameObject cannon in cannons)
+        {
+            cannon.GetComponent<EnemyCannonScript>().isactive = true;
+        }
         GetComponent<NavMeshAgent>().speed = speed * 2;
         health -= damage;
         state = 1;
