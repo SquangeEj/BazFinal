@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16796207, g: 0.19867295, b: 0.23045884, a: 1}
+  m_IndirectSpecularColor: {r: 0.16796191, g: 0.19867264, b: 0.23045826, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8216,13 +8216,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f5fefb6f9a549a4ebb2b6e4f57235d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManagerPoints: 10
+  ManagerPoints: 200
   Outposts:
   - {fileID: 2016297623}
+  - {fileID: 1233016275}
+  - {fileID: 1398609943}
+  - {fileID: 1405000050}
   Waypoints: []
   Unit: {fileID: 4796026086981670223, guid: 7131de460228cac4e83d3fa5d9876b6b, type: 3}
-  lol: 60
-  spawnrate: 600
+  lol: 2
+  spawnrate: 1800
 --- !u!4 &917545454
 Transform:
   m_ObjectHideFlags: 0
@@ -11895,10 +11898,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaypointSelector:
   - {fileID: 860975856}
+  - {fileID: 173059278}
+  - {fileID: 1288528161}
   waypoints1:
   - {fileID: 1151626336}
-  waypoints2: []
-  waypoints3: []
+  - {fileID: 169262671}
+  - {fileID: 1841521799}
+  - {fileID: 766113611}
+  - {fileID: 1281529158}
+  - {fileID: 1432389871}
+  waypoints2:
+  - {fileID: 2028683833}
+  - {fileID: 948727290}
+  - {fileID: 436284287}
+  - {fileID: 238097698}
+  - {fileID: 1074145322}
+  - {fileID: 1929295787}
+  - {fileID: 1212732075}
+  - {fileID: 586124386}
+  - {fileID: 879245484}
+  waypoints3:
+  - {fileID: 904122386}
+  - {fileID: 14548926}
+  - {fileID: 520258811}
+  - {fileID: 646499173}
+  - {fileID: 1044652486}
+  - {fileID: 1852470911}
+  - {fileID: 250669546}
+  - {fileID: 1029798467}
+  - {fileID: 546405033}
+  - {fileID: 1267912972}
+  - {fileID: 1525365699}
   waypoints4: []
 --- !u!1 &1233054479 stripped
 GameObject:
@@ -13572,10 +13602,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaypointSelector:
   - {fileID: 1906937528}
+  - {fileID: 1887443384}
+  - {fileID: 104765386}
   waypoints1:
   - {fileID: 272979480}
-  waypoints2: []
-  waypoints3: []
+  - {fileID: 1177437160}
+  - {fileID: 1469857341}
+  - {fileID: 1930948632}
+  - {fileID: 1864704779}
+  - {fileID: 1086627267}
+  - {fileID: 1921584644}
+  waypoints2:
+  - {fileID: 2123670070}
+  - {fileID: 922227420}
+  - {fileID: 1230694115}
+  - {fileID: 53086809}
+  - {fileID: 495951737}
+  - {fileID: 719555973}
+  - {fileID: 1064848500}
+  waypoints3:
+  - {fileID: 1781659760}
+  - {fileID: 1431925332}
+  - {fileID: 168427804}
+  - {fileID: 1622514111}
+  - {fileID: 467255851}
+  - {fileID: 1013895379}
+  - {fileID: 985610017}
+  - {fileID: 577454696}
+  - {fileID: 1220426903}
+  - {fileID: 366864670}
   waypoints4: []
 --- !u!1 &1405000050
 GameObject:
@@ -13627,10 +13682,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WaypointSelector:
   - {fileID: 343604386}
+  - {fileID: 616079601}
+  - {fileID: 556577212}
   waypoints1:
   - {fileID: 148411601}
-  waypoints2: []
-  waypoints3: []
+  - {fileID: 1117643483}
+  - {fileID: 122400498}
+  - {fileID: 315138500}
+  - {fileID: 395374365}
+  - {fileID: 26651529}
+  waypoints2:
+  - {fileID: 930121378}
+  - {fileID: 144057679}
+  - {fileID: 1988419965}
+  - {fileID: 1647759180}
+  - {fileID: 1368020444}
+  - {fileID: 987681434}
+  - {fileID: 432367718}
+  waypoints3:
+  - {fileID: 1194627556}
+  - {fileID: 1968201788}
+  - {fileID: 145787519}
+  - {fileID: 1213956656}
+  - {fileID: 1707936495}
+  - {fileID: 777478629}
+  - {fileID: 2084469005}
+  - {fileID: 2130101333}
+  - {fileID: 1330941812}
+  - {fileID: 1315441588}
+  - {fileID: 570330684}
+  - {fileID: 2141355185}
   waypoints4: []
 --- !u!1 &1409999829
 GameObject:
